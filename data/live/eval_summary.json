@@ -1,0 +1,58 @@
+{
+ "generation": {
+  "S1_256_3_no": {
+   "graded": 12,
+   "correct": 41.7,
+   "wrong": 8.3,
+   "refused_correctly": 33.3,
+   "refused_wrongly": 16.7,
+   "fact_recall": 0.417,
+   "faithfulness": 0.875,
+   "judge_agreement_with_rules": 1.0
+  }
+ },
+ "retrieval": {
+  "R5_hybrid_route_rerank": {
+   "label": "450 tok, 10+10->4 RRF, routed, re-rank yes",
+   "n": 20,
+   "hit_at_k": 0.625,
+   "mrr": 0.594,
+   "paper_precision": 1.0,
+   "fact_in_context": 0.609,
+   "fact_retention_after_compression": 0.911,
+   "ctx_tokens_before": 1317.05,
+   "ctx_tokens_after": 732.95,
+   "retrieval_ms_p50": 675.148,
+   "top_score_answerable_min": -2.677,
+   "top_score_unanswerable_max": -0.7260637283325195
+  },
+  "S3_450_8to4_rrf_no": {
+   "label": "450 tok, 8->4 via RRF, re-rank no",
+   "n": 20,
+   "hit_at_k": 0.562,
+   "mrr": 0.406,
+   "paper_precision": 0.984,
+   "fact_in_context": 0.62,
+   "fact_retention_after_compression": 0.933,
+   "ctx_tokens_before": 1104.25,
+   "ctx_tokens_after": 1097.45,
+   "retrieval_ms_p50": 18.821,
+   "top_score_answerable_min": null,
+   "top_score_unanswerable_max": null
+  },
+  "S1_256_3_no": {
+   "label": "256 tok, 3 pieces, re-rank no",
+   "n": 20,
+   "hit_at_k": 0.5,
+   "mrr": 0.385,
+   "paper_precision": 0.979,
+   "fact_in_context": 0.579,
+   "fact_retention_after_compression": 1.0,
+   "ctx_tokens_before": 1007.75,
+   "ctx_tokens_after": 995.85,
+   "retrieval_ms_p50": 1.462,
+   "top_score_answerable_min": null,
+   "top_score_unanswerable_max": null
+  }
+ }
+}

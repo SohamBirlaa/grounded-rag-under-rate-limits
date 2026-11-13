@@ -1,0 +1,53 @@
+# The Relay — Baseline System Configuration
+# Phase 1: Foundation
+
+provider:
+  base_url: "https://api.groq.com/openai/v1"
+  model_id: "llama-3.1-8b-instant"
+  request_timeout_s: 15.0
+  max_retries: 2
+  default_source: "real"
+
+standin:
+  base_ttft_ms: 280.0
+  prompt_token_slope: 0.05
+  noise_sigma_ms: 15.0
+  slow_ttft_ms: 3500.0
+  itl_ms: 4.5
+  slow_tpot_ms: 60.0
+  chunk_size: 3
+  load_factor: 12.0
+  concurrency_knee: 4
+  concurrency_slope: 0.15
+  failure_rate: 0.0
+  rate_limit_rpm: 30
+  rate_limit_tpm: 6000
+  daily_rpd: 14400
+  daily_tpd: 500000
+
+reliability:
+  max_queue_size: 24
+  queue_timeout_ms: 4500.0
+  default_deadline_ms: 12000
+  max_in_flight_llm: 8
+  max_in_flight_tools: 8
+  tpm_compact_threshold_pct: 0.25
+  compact_pieces_k: 2
+  compact_max_tokens: 200
+  daily_reset_hour_utc: 15
+
+rag:
+  embedding_model: "BAAI/bge-small-en-v1.5"
+  bm25_k1: 1.5
+  bm25_b: 0.75
+  rrf_k: 60
+  default_setting: "S3_450_8to4_rrf_no"
+  corpus_manifest_path: "data/corpus/manifest.json"
+  corpus_dir: "data/corpus/pdfs"
+
+observability:
+  log_level: "INFO"
+  trace_spans_path: "data/traces/stage_spans.jsonl"
+  scenario_metrics_path: "data/traces/scenario_metrics.json"
+  results_csv_path: "results.csv"
+

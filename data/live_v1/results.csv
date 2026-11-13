@@ -1,0 +1,61 @@
+request_id,scenario,source,start_time,first_token_ms,total_ms,status,retries,tokens_in,tokens_out,retrieval_setting,answer_grade,model,path,queue_wait_ms,cached_tokens,provider_first_token_ms
+eval_S1_256_3_no_q_catA_01,retrieval_eval,real,2026-11-12T10:15:16.272+00:00,528.9,528.9,ok,0,1482,61,"256 tok, 3 pieces, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,513.7
+eval_S1_256_3_no_q_catA_02,retrieval_eval,real,2026-11-12T10:15:16.807+00:00,523.8,523.9,ok,0,926,72,"256 tok, 3 pieces, re-rank no",wrong,openai/gpt-oss-20b,answer,0.4,0,495.8
+eval_S1_256_3_no_q_catA_03,retrieval_eval,real,2026-11-12T10:15:17.958+00:00,610.5,610.5,ok,0,1187,98,"256 tok, 3 pieces, re-rank no",correct,openai/gpt-oss-20b,answer,0.2,0,581.5
+eval_S1_256_3_no_q_catA_04,retrieval_eval,real,2026-11-12T10:15:23.163+00:00,701.6,701.7,ok,0,1907,64,"256 tok, 3 pieces, re-rank no",wrong,openai/gpt-oss-20b,answer,0.1,0,647.4
+eval_S1_256_3_no_q_catA_05,retrieval_eval,real,2026-11-12T10:15:38.616+00:00,602.6,602.6,ok,0,1053,69,"256 tok, 3 pieces, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,577.2
+eval_S1_256_3_no_q_catA_06,retrieval_eval,real,2026-11-12T10:15:47.282+00:00,826.0,886.0,ok,0,1691,117,"256 tok, 3 pieces, re-rank no",wrong,openai/gpt-oss-20b,answer,0.1,0,785.0
+eval_S1_256_3_no_q_catA_07,retrieval_eval,real,2026-11-12T10:16:00.007+00:00,525.1,533.8,ok,0,719,104,"256 tok, 3 pieces, re-rank no",wrong,openai/gpt-oss-20b,answer,0.2,0,470.7
+eval_S1_256_3_no_q_catA_08,retrieval_eval,real,2026-11-12T10:16:06.252+00:00,746.3,746.4,ok,0,926,193,"256 tok, 3 pieces, re-rank no",wrong,openai/gpt-oss-20b,answer,0.2,0,636.3
+eval_S1_256_3_no_q_catB_01,retrieval_eval,real,2026-11-12T10:16:14.664+00:00,1448.6,1468.5,ok,0,1990,124,"256 tok, 3 pieces, re-rank no",wrong,openai/gpt-oss-20b,answer,0.1,0,1439.1
+eval_S1_256_3_no_q_catB_02,retrieval_eval,real,2026-11-12T10:16:30.900+00:00,567.3,661.8,ok,0,877,170,"256 tok, 3 pieces, re-rank no",wrong,openai/gpt-oss-20b,answer,0.1,0,559.2
+eval_S1_256_3_no_q_catB_03,retrieval_eval,real,2026-11-12T10:16:38.527+00:00,624.6,624.6,ok,0,1309,66,"256 tok, 3 pieces, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,596.5
+eval_S1_256_3_no_q_catB_04,retrieval_eval,real,2026-11-12T10:16:49.216+00:00,665.3,665.3,ok,0,1480,63,"256 tok, 3 pieces, re-rank no",wrong,openai/gpt-oss-20b,answer,0.1,0,615.1
+eval_S1_256_3_no_q_catC_01,retrieval_eval,real,2026-11-12T10:17:00.729+00:00,731.1,781.0,ok,0,1571,218,"256 tok, 3 pieces, re-rank no",wrong,openai/gpt-oss-20b,answer,0.1,0,705.4
+eval_S1_256_3_no_q_catC_02,retrieval_eval,real,2026-11-12T10:17:14.307+00:00,674.4,674.4,ok,0,1402,57,"256 tok, 3 pieces, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,653.4
+eval_S1_256_3_no_q_catC_03,retrieval_eval,real,2026-11-12T10:17:25.048+00:00,641.8,641.8,ok,0,1553,69,"256 tok, 3 pieces, re-rank no",wrong,openai/gpt-oss-20b,answer,0.1,0,600.5
+eval_S1_256_3_no_q_catC_04,retrieval_eval,real,2026-11-12T10:17:37.524+00:00,386.7,386.7,ok,0,521,58,"256 tok, 3 pieces, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,367.7
+eval_S1_256_3_no_q_catD_01,retrieval_eval,real,2026-11-12T10:17:40.923+00:00,601.6,601.6,ok,0,1648,64,"256 tok, 3 pieces, re-rank no",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,562.5
+eval_S1_256_3_no_q_catD_02,retrieval_eval,real,2026-11-12T10:17:54.637+00:00,384.5,384.5,ok,0,1678,43,"256 tok, 3 pieces, re-rank no",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,381.7
+eval_S1_256_3_no_q_catD_03,retrieval_eval,real,2026-11-12T10:18:07.084+00:00,533.9,533.9,ok,0,1800,41,"256 tok, 3 pieces, re-rank no",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,506.8
+eval_S1_256_3_no_q_catD_04,retrieval_eval,real,2026-11-12T10:18:21.695+00:00,435.2,435.2,ok,0,1357,79,"256 tok, 3 pieces, re-rank no",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,390.2
+eval_S3_450_8to4_rrf_no_q_catA_01,retrieval_eval,real,2026-11-12T10:18:32.188+00:00,707.9,707.9,ok,0,1624,72,"450 tok, 8->4 via RRF, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,691.9
+eval_S3_450_8to4_rrf_no_q_catA_02,retrieval_eval,real,2026-11-12T10:18:44.955+00:00,1127.3,1127.3,ok,0,1082,75,"450 tok, 8->4 via RRF, re-rank no",wrong,openai/gpt-oss-20b,answer,0.0,0,1064.0
+eval_S3_450_8to4_rrf_no_q_catA_03,retrieval_eval,real,2026-11-12T10:18:54.071+00:00,1061.9,1061.9,ok,0,3327,159,"450 tok, 8->4 via RRF, re-rank no",refused_wrongly,openai/gpt-oss-20b,unverified_refusal,0.1,0,282.0
+eval_S3_450_8to4_rrf_no_q_catA_04,retrieval_eval,real,2026-11-12T10:19:20.272+00:00,347.1,347.1,ok,0,1905,68,"450 tok, 8->4 via RRF, re-rank no",refused_wrongly,openai/gpt-oss-20b,unverified_refusal,0.1,0,290.7
+eval_S3_450_8to4_rrf_no_q_catA_05,retrieval_eval,real,2026-11-12T10:19:35.699+00:00,597.3,597.3,ok,0,1282,76,"450 tok, 8->4 via RRF, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,563.9
+eval_S3_450_8to4_rrf_no_q_catA_06,retrieval_eval,real,2026-11-12T10:19:45.349+00:00,616.0,616.0,ok,0,1620,80,"450 tok, 8->4 via RRF, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,586.8
+eval_S3_450_8to4_rrf_no_q_catA_07,retrieval_eval,real,2026-11-12T10:19:58.011+00:00,666.2,695.4,ok,0,1665,100,"450 tok, 8->4 via RRF, re-rank no",wrong,openai/gpt-oss-20b,answer,0.1,0,627.9
+eval_S3_450_8to4_rrf_no_q_catA_08,retrieval_eval,real,2026-11-12T10:20:11.547+00:00,945.1,945.1,ok,0,1333,196,"450 tok, 8->4 via RRF, re-rank no",wrong,openai/gpt-oss-20b,answer,0.1,0,897.9
+eval_S3_450_8to4_rrf_no_q_catB_01,retrieval_eval,real,2026-11-12T10:20:23.084+00:00,703.2,703.2,ok,0,1538,63,"450 tok, 8->4 via RRF, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,674.7
+eval_S3_450_8to4_rrf_no_q_catB_02,retrieval_eval,real,2026-11-12T10:20:34.853+00:00,540.1,630.7,ok,0,1541,188,"450 tok, 8->4 via RRF, re-rank no",correct,openai/gpt-oss-20b,answer,0.1,0,480.2
+eval_S3_450_8to4_rrf_no_q_catB_03,retrieval_eval,real,2026-11-12T10:20:48.300+00:00,435.5,435.5,ok,0,1346,72,"450 tok, 8->4 via RRF, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,383.3
+eval_S3_450_8to4_rrf_no_q_catB_04,retrieval_eval,real,2026-11-12T10:20:58.787+00:00,653.8,653.8,ok,0,1470,64,"450 tok, 8->4 via RRF, re-rank no",wrong,openai/gpt-oss-20b,answer,0.1,0,602.0
+eval_S3_450_8to4_rrf_no_q_catC_01,retrieval_eval,real,2026-11-12T10:21:10.232+00:00,666.7,666.7,ok,0,1589,204,"450 tok, 8->4 via RRF, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,656.5
+eval_S3_450_8to4_rrf_no_q_catC_02,retrieval_eval,real,2026-11-12T10:21:23.944+00:00,2907.2,2907.2,ok,0,1615,56,"450 tok, 8->4 via RRF, re-rank no",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,2882.7
+eval_S3_450_8to4_rrf_no_q_catC_03,retrieval_eval,real,2026-11-12T10:21:35.880+00:00,719.1,719.1,ok,0,1998,100,"450 tok, 8->4 via RRF, re-rank no",wrong,openai/gpt-oss-20b,answer,0.1,0,665.2
+eval_S3_450_8to4_rrf_no_q_catC_04,retrieval_eval,real,2026-11-12T10:21:52.326+00:00,648.3,709.2,ok,0,1803,131,"450 tok, 8->4 via RRF, re-rank no",correct,openai/gpt-oss-20b,answer,0.1,0,561.7
+eval_S3_450_8to4_rrf_no_q_catD_01,retrieval_eval,real,2026-11-12T10:22:06.878+00:00,617.5,617.5,ok,0,2303,70,"450 tok, 8->4 via RRF, re-rank no",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,552.4
+eval_S3_450_8to4_rrf_no_q_catD_02,retrieval_eval,real,2026-11-12T10:22:24.588+00:00,632.2,632.2,ok,0,1387,35,"450 tok, 8->4 via RRF, re-rank no",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,576.4
+eval_S3_450_8to4_rrf_no_q_catD_03,retrieval_eval,real,2026-11-12T10:22:35.268+00:00,628.2,628.2,ok,0,1718,50,"450 tok, 8->4 via RRF, re-rank no",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,584.2
+eval_S3_450_8to4_rrf_no_q_catD_04,retrieval_eval,real,2026-11-12T10:22:47.967+00:00,588.5,588.5,ok,0,1370,79,"450 tok, 8->4 via RRF, re-rank no",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,535.6
+eval_R5_hybrid_route_rerank_q_catA_01,retrieval_eval,real,2026-11-12T10:22:59.613+00:00,1950.1,1950.1,ok,0,1369,119,"450 tok, 10+10->4 RRF, routed, re-rank yes",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,1918.8
+eval_R5_hybrid_route_rerank_q_catA_02,retrieval_eval,real,2026-11-12T10:23:10.598+00:00,1383.0,1383.1,ok,0,1082,75,"450 tok, 10+10->4 RRF, routed, re-rank yes",wrong,openai/gpt-oss-20b,answer,0.1,0,1310.3
+eval_R5_hybrid_route_rerank_q_catA_03,retrieval_eval,real,2026-11-12T10:23:18.650+00:00,1997.6,1997.6,ok,0,3357,122,"450 tok, 10+10->4 RRF, routed, re-rank yes",refused_wrongly,openai/gpt-oss-20b,unverified_refusal,0.1,0,1383.9
+eval_R5_hybrid_route_rerank_q_catA_04,retrieval_eval,real,2026-11-12T10:23:44.868+00:00,1223.9,1232.2,ok,0,1224,84,"450 tok, 10+10->4 RRF, routed, re-rank yes",wrong,openai/gpt-oss-20b,answer,0.1,0,1192.8
+eval_R5_hybrid_route_rerank_q_catA_05,retrieval_eval,real,2026-11-12T10:23:54.929+00:00,1455.5,1459.5,ok,0,1421,139,"450 tok, 10+10->4 RRF, routed, re-rank yes",wrong,openai/gpt-oss-20b,answer,0.1,0,1338.3
+eval_R5_hybrid_route_rerank_q_catA_06,retrieval_eval,real,2026-11-12T10:24:07.155+00:00,1950.8,1950.8,ok,0,1451,113,"450 tok, 10+10->4 RRF, routed, re-rank yes",wrong,openai/gpt-oss-20b,answer,0.1,0,1885.4
+eval_R5_hybrid_route_rerank_q_catA_07,retrieval_eval,real,2026-11-12T10:24:18.156+00:00,1582.1,1582.1,ok,0,1107,202,"450 tok, 10+10->4 RRF, routed, re-rank yes",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,1569.1
+eval_R5_hybrid_route_rerank_q_catA_08,retrieval_eval,real,2026-11-12T10:24:28.813+00:00,1821.6,1821.6,ok,0,1133,191,"450 tok, 10+10->4 RRF, routed, re-rank yes",wrong,openai/gpt-oss-20b,answer,0.1,256,1720.1
+eval_R5_hybrid_route_rerank_q_catB_01,retrieval_eval,real,2026-11-12T10:24:36.709+00:00,1457.9,1481.4,ok,0,1283,116,"450 tok, 10+10->4 RRF, routed, re-rank yes",wrong,openai/gpt-oss-20b,answer,0.1,0,1437.4
+eval_R5_hybrid_route_rerank_q_catB_02,retrieval_eval,real,2026-11-12T10:24:46.747+00:00,1396.1,1532.9,ok,0,1410,168,"450 tok, 10+10->4 RRF, routed, re-rank yes",wrong,openai/gpt-oss-20b,answer,0.1,0,1355.3
+eval_R5_hybrid_route_rerank_q_catB_03,retrieval_eval,real,2026-11-12T10:24:58.380+00:00,1227.4,1227.4,ok,0,1168,60,"450 tok, 10+10->4 RRF, routed, re-rank yes",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,1184.4
+eval_R5_hybrid_route_rerank_q_catB_04,retrieval_eval,real,2026-11-12T10:25:07.635+00:00,1419.8,1419.9,ok,0,1107,116,"450 tok, 10+10->4 RRF, routed, re-rank yes",wrong,openai/gpt-oss-20b,answer,0.1,0,1360.2
+eval_R5_hybrid_route_rerank_q_catC_01,retrieval_eval,real,2026-11-12T10:25:16.734+00:00,1555.4,1555.4,ok,0,1460,142,"450 tok, 10+10->4 RRF, routed, re-rank yes",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,1523.4
+eval_R5_hybrid_route_rerank_q_catC_02,retrieval_eval,real,2026-11-12T10:25:29.344+00:00,1267.3,1267.3,ok,0,1315,43,"450 tok, 10+10->4 RRF, routed, re-rank yes",refused_wrongly,openai/gpt-oss-20b,model_refusal,0.1,0,1236.8
+eval_R5_hybrid_route_rerank_q_catC_03,retrieval_eval,real,2026-11-12T10:25:39.677+00:00,1478.7,1524.9,ok,0,1319,89,"450 tok, 10+10->4 RRF, routed, re-rank yes",wrong,openai/gpt-oss-20b,answer,0.1,0,1437.1
+eval_R5_hybrid_route_rerank_q_catC_04,retrieval_eval,real,2026-11-12T10:25:50.033+00:00,1442.0,1442.0,ok,0,900,87,"450 tok, 10+10->4 RRF, routed, re-rank yes",correct,openai/gpt-oss-20b,answer,0.1,0,1374.9
+eval_R5_hybrid_route_rerank_q_catD_01,retrieval_eval,real,2026-11-12T10:25:57.059+00:00,1459.6,1459.6,ok,0,1672,71,"450 tok, 10+10->4 RRF, routed, re-rank yes",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,1373.1
+eval_R5_hybrid_route_rerank_q_catD_02,retrieval_eval,real,2026-11-12T10:26:10.601+00:00,1447.9,1448.0,ok,0,1414,60,"450 tok, 10+10->4 RRF, routed, re-rank yes",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,1420.7
+eval_R5_hybrid_route_rerank_q_catD_03,retrieval_eval,real,2026-11-12T10:26:21.131+00:00,1411.3,1411.3,ok,0,1405,41,"450 tok, 10+10->4 RRF, routed, re-rank yes",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,1406.8
+eval_R5_hybrid_route_rerank_q_catD_04,retrieval_eval,real,2026-11-12T10:26:32.597+00:00,1155.2,1155.2,ok,0,1421,72,"450 tok, 10+10->4 RRF, routed, re-rank yes",refused_correctly,openai/gpt-oss-20b,model_refusal,0.1,0,1103.8

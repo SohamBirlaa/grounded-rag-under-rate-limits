@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-11-12T10:45:32Z",
+  "papers": [
+    {
+      "paper_id": "1706.03762v7",
+      "version": "v7",
+      "title": "Attention Is All You Need",
+      "pages": 15,
+      "elements_count": 132,
+      "sections_count": 49
+    },
+    {
+      "paper_id": "2410.00037v1",
+      "version": "v1",
+      "title": "Moshi: a speech-text foundation model for real-time dialogue",
+      "pages": 66,
+      "elements_count": 276,
+      "sections_count": 61
+    },
+    {
+      "paper_id": "2507.07955v2",
+      "version": "v2",
+      "title": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling",
+      "pages": 39,
+      "elements_count": 199,
+      "sections_count": 61
+    }
+  ],
+  "s1_256": {
+    "total_chunks": 400,
+    "avg_tokens": 231.905,
+    "tables_count": 45
+  },
+  "s23_450": {
+    "total_chunks": 344,
+    "avg_tokens": 265.5901162790698,
+    "tables_count": 41,
+    "embedding_dims": 384
+  }
+}

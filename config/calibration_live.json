@@ -1,0 +1,11 @@
+{
+ "source": "data/calibration/live_probe_openai/gpt-oss-20b.json",
+ "n_rows": 24,
+ "base_ttft_ms": 400.2,
+ "prompt_token_slope_ms": 0.0954,
+ "noise_sigma_ms": 167.3,
+ "ttft_p95_residual_ms": 240.4,
+ "itl_ms_p50": 0.64,
+ "concurrency_ttft_ratio_8_vs_1": 2.99,
+ "token_ratio": 1.2535748436873007
+}

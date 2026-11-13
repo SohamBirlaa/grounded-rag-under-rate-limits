@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "num_questions": 16,
+    "num_repetitions": 5,
+    "total_queries_per_setting": 80,
+    "cold_index_load_ms": 1009.7,
+    "warmup_duration_ms": 13.35,
+    "execution_environment": "Local CPU (ONNX Runtime, in-memory)"
+  },
+  "settings": {
+    "S1_256_3_no": {
+      "setting": "S1_256_3_no",
+      "default_k": 3,
+      "questions_evaluated": 16,
+      "repetitions": 5,
+      "total_calls": 80,
+      "page_hit_recall": 0.1875,
+      "mrr": 0.1042,
+      "latency_ms": {
+        "mean": 0.63,
+        "p50": 0.64,
+        "p95": 0.99,
+        "min": 0.28,
+        "max": 1.12
+      }
+    },
+    "S2_450_5_no": {
+      "setting": "S2_450_5_no",
+      "default_k": 5,
+      "questions_evaluated": 16,
+      "repetitions": 5,
+      "total_calls": 80,
+      "page_hit_recall": 0.3125,
+      "mrr": 0.1615,
+      "latency_ms": {
+        "mean": 7.21,
+        "p50": 7.01,
+        "p95": 9.76,
+        "min": 5.02,
+        "max": 10.35
+      }
+    },
+    "S3_450_8to4_rrf_no": {
+      "setting": "S3_450_8to4_rrf_no",
+      "default_k": 4,
+      "questions_evaluated": 16,
+      "repetitions": 5,
+      "total_calls": 80,
+      "page_hit_recall": 0.3125,
+      "mrr": 0.1615,
+      "latency_ms": {
+        "mean": 8.63,
+        "p50": 8.16,
+        "p95": 11.6,
+        "min": 5.36,
+        "max": 34.11
+      }
+    },
+    "S_opt_structure": {
+      "setting": "S_opt_structure",
+      "default_k": 5,
+      "questions_evaluated": 16,
+      "repetitions": 5,
+      "total_calls": 80,
+      "page_hit_recall": 0.4375,
+      "mrr": 0.2812,
+      "latency_ms": {
+        "mean": 8.73,
+        "p50": 8.54,
+        "p95": 11.86,
+        "min": 5.44,
+        "max": 13.84
+      }
+    }
+  },
+  "decision_rule_evaluation": {
+    "rule_specification": "05_rag_architecture_and_evaluation.md \u00a75.5.1 / ADR-17",
+    "criteria": {
+      "criterion_1_retrieval_quality": {
+        "description": "Recall gain >= +5.0% absolute without degrading MRR",
+        "delta_recall": 0.125,
+        "delta_mrr": 0.1197,
+        "passed": true
+      },
+      "criterion_2_trap_disambiguation": {
+        "description": "Disambiguates >= 1 Category B cross-paper trap question",
+        "passed": true
+      },
+      "criterion_3_citation_integrity": {
+        "description": "Maintains 100% citation format and valid section/page provenance",
+        "passed": true
+      },
+      "criterion_4_latency_budget": {
+        "description": "Added retrieval time <= 5.0 ms p95 over S3 AND total Stage 2 < 15.0 ms",
+        "s3_p95_ms": 11.6,
+        "s_opt_p95_ms": 11.86,
+        "p95_overhead_ms": 0.26,
+        "mean_overhead_ms": 0.1,
+        "overhead_threshold_ms": 5.0,
+        "total_stage2_ceiling_ms": 15.0,
+        "overhead_check_passed": true,
+        "total_ceiling_check_passed": true,
+        "passed": true
+      },
+      "criterion_5_token_overhead": {
+        "description": "Context token inflation <= 10%",
+        "passed": true
+      }
+    },
+    "all_criteria_met": true,
+    "recommendation": "Adopt S_opt_structure as production default"
+  }
+}

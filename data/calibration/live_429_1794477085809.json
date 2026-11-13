@@ -1,0 +1,36 @@
+{
+  "is_live_capture": true,
+  "captured_at_utc": "2026-11-12T09:51:25Z",
+  "model": "openai/gpt-oss-20b",
+  "status_code": 429,
+  "headers": {
+    "date": "Thu, 12 Nov 2026 09:51:25 GMT",
+    "content-type": "application/json",
+    "content-length": "376",
+    "connection": "keep-alive",
+    "cache-control": "private, max-age=0, no-store, no-cache, must-revalidate",
+    "retry-after": "1",
+    "server": "cloudflare",
+    "vary": "Origin",
+    "x-groq-region": "bom",
+    "x-ratelimit-limit-requests": "1000",
+    "x-ratelimit-limit-tokens": "8000",
+    "x-ratelimit-remaining-requests": "959",
+    "x-ratelimit-remaining-tokens": "2453",
+    "x-ratelimit-reset-requests": "59m2.4s",
+    "x-ratelimit-reset-tokens": "41.602s",
+    "x-request-id": "req_01m77jpmree729e7g9d8hagxsm",
+    "strict-transport-security": "max-age=15552000",
+    "via": "1.1 google",
+    "cf-cache-status": "DYNAMIC",
+    "cf-ray": "a594a357cd5559d2-DEL",
+    "alt-svc": "h3=\":443\"; ma=86400"
+  },
+  "body": {
+    "error": {
+      "message": "Rate limit reached for model `openai/gpt-oss-20b` in organization `org_01krhr44zrfser0d0kt55c92xm` service tier `on_demand` on tokens per minute (TPM): Limit 8000, Used 5547, Requested 2523. Please try again in 525ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing",
+      "type": "tokens",
+      "code": "rate_limit_exceeded"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+# ---- Secrets (never commit) ----
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# ---- Python environment & caches ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# ---- AI-tool / editor leftovers ----
+.agents/
+skills-lock.json
+graphify-out/
+src/graphify-out/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ---- Old / superseded artefacts (not used by the report) ----
+scratch/
+tmp/
+*.log
+*.bak
+Docs/*
+!Docs/LIVE_RUNBOOK.md
+data/traces/
+data/state/
+data/backup_offline_benchmarks/
+data/corpus/indexes_v1/
+data/calibration/groq_429_sample.json
+data/calibration/table1_empirical_limits.json
+data/calibration/live_probe_run1_backup.json
+
+# ---- Re-downloadable inputs ----
+# PDFs: `uv run python scripts/fetch_corpus.py`. The built index (data/corpus/indexes/, 1.7 MB) IS committed,
+# so retrieval and the cited chunk ids reproduce exactly.
+data/corpus/pdfs/

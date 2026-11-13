@@ -1,0 +1,86 @@
+{
+ "human_graded_rows": 0,
+ "policies": {
+  "rules": {
+   "agreement_with_human": null,
+   "n_compared": 0,
+   "per_setting": {
+    "256 tok, 3 pieces, re-rank no": {
+     "correct": 10.0,
+     "wrong": 45.0,
+     "refused_correctly": 20.0,
+     "refused_wrongly": 25.0,
+     "graded": 20
+    },
+    "450 tok, 8->4 via RRF, re-rank no": {
+     "correct": 10.0,
+     "wrong": 25.0,
+     "refused_correctly": 20.0,
+     "refused_wrongly": 45.0,
+     "graded": 20
+    },
+    "450 tok, 10+10->4 RRF, routed, re-rank yes": {
+     "correct": 5.0,
+     "wrong": 45.0,
+     "refused_correctly": 20.0,
+     "refused_wrongly": 30.0,
+     "graded": 20
+    }
+   }
+  },
+  "rules_and_judge": {
+   "agreement_with_human": null,
+   "n_compared": 0,
+   "per_setting": {
+    "256 tok, 3 pieces, re-rank no": {
+     "correct": 5.0,
+     "wrong": 50.0,
+     "refused_correctly": 20.0,
+     "refused_wrongly": 25.0,
+     "graded": 20
+    },
+    "450 tok, 8->4 via RRF, re-rank no": {
+     "correct": 10.0,
+     "wrong": 25.0,
+     "refused_correctly": 20.0,
+     "refused_wrongly": 45.0,
+     "graded": 20
+    },
+    "450 tok, 10+10->4 RRF, routed, re-rank yes": {
+     "correct": 5.0,
+     "wrong": 45.0,
+     "refused_correctly": 20.0,
+     "refused_wrongly": 30.0,
+     "graded": 20
+    }
+   }
+  },
+  "judge_primary": {
+   "agreement_with_human": null,
+   "n_compared": 0,
+   "per_setting": {
+    "256 tok, 3 pieces, re-rank no": {
+     "correct": 35.0,
+     "wrong": 20.0,
+     "refused_correctly": 20.0,
+     "refused_wrongly": 25.0,
+     "graded": 20
+    },
+    "450 tok, 8->4 via RRF, re-rank no": {
+     "correct": 30.0,
+     "wrong": 5.0,
+     "refused_correctly": 20.0,
+     "refused_wrongly": 45.0,
+     "graded": 20
+    },
+    "450 tok, 10+10->4 RRF, routed, re-rank yes": {
+     "correct": 30.0,
+     "wrong": 20.0,
+     "refused_correctly": 20.0,
+     "refused_wrongly": 30.0,
+     "graded": 20
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,158 @@
+{
+  "metadata": {
+    "schema_version": "1.0.0",
+    "title": "The Relay — Stand-In Calibration and Operational Limit Specifications",
+    "target_model": "llama-3.1-8b-instant",
+    "date": "2026-11-12",
+    "phase": "Phase 4: Controllable & Calibrated Stand-In Model Service",
+    "live_groq_api_calls_in_phase_3": 0,
+    "live_groq_api_calls_in_phase_4": 0,
+    "external_quota_consumed_tokens": 0,
+    "empirical_parity_claim": "NONE (Zero parity claims fabricated; empirical residuals unavailable without live benchmark data)"
+  },
+  "provenance_legend": {
+    "Documented Rate Limit": "Verified against official published provider documentation (console.groq.com/settings/limits).",
+    "System Architecture Parameter": "Architectural design parameter derived from capacity engineering (e.g., Little's Law L = lambda * W).",
+    "Provisional Baseline": "Configured baseline parameter pending empirical calibration in authorized live benchmark runs.",
+    "Synthetic Specification": "Controllable simulation parameter or test fixture matching official schema and error formats.",
+    "Unverified Empirical Measurement": "Metric not empirically verified through real telemetry in this workspace."
+  },
+  "parameters": {
+    "base_ttft_ms": {
+      "value": 280.0,
+      "unit": "milliseconds",
+      "provenance": "Provisional Baseline",
+      "description": "Baseline Time-to-First-Token prefill latency under zero load.",
+      "validation_status": "Provisional; derived from published Llama 3.1 8B instant prefill averages on hosted hardware.",
+      "measurement_method": "Configured baseline; empirical fitting deferred to live benchmark run."
+    },
+    "prompt_token_slope": {
+      "value": 0.05,
+      "unit": "milliseconds/token",
+      "provenance": "Provisional Baseline",
+      "description": "Prefill latency scaling factor per prompt token.",
+      "validation_status": "Provisional; accounts for linear token embedding/attention prefill duration.",
+      "measurement_method": "Configured slope parameter."
+    },
+    "noise_sigma_ms": {
+      "value": 15.0,
+      "unit": "milliseconds",
+      "provenance": "Synthetic Specification",
+      "description": "Standard deviation of Gaussian TTFT noise for synthetic latency variance.",
+      "validation_status": "Synthetic; active when inject_delay=True and random_seed is set.",
+      "measurement_method": "Configured noise parameter."
+    },
+    "slow_ttft_ms": {
+      "value": 3500.0,
+      "unit": "milliseconds",
+      "provenance": "Synthetic Specification",
+      "description": "Forced TTFT stall duration for Heading 4 tail latency diagnosis and slow-request attribution.",
+      "validation_status": "Synthetic fault injection mode.",
+      "measurement_method": "Controllable test override (mode='slow_ttft')."
+    },
+    "itl_ms": {
+      "value": 4.5,
+      "unit": "milliseconds/token",
+      "provenance": "Documented Reference Derivation",
+      "description": "Inter-Token Latency (~222 tokens/second decode rate).",
+      "validation_status": "Derived from Groq published speed benchmarks for llama-3.1-8b-instant (200-280 tok/s).",
+      "measurement_method": "Analytical conversion from published throughput: 1000 ms / 222 tokens ≈ 4.5 ms/tok."
+    },
+    "slow_tpot_ms": {
+      "value": 60.0,
+      "unit": "milliseconds/token",
+      "provenance": "Synthetic Specification",
+      "description": "Forced slow decode generation delay for post-TTFT tail latency diagnosis.",
+      "validation_status": "Synthetic fault injection mode.",
+      "measurement_method": "Controllable test override (mode='slow_tpot')."
+    },
+    "chunk_size": {
+      "value": 3,
+      "unit": "tokens/chunk",
+      "provenance": "Synthetic Specification",
+      "description": "Number of tokens per Server-Sent Event (SSE) streaming delta chunk.",
+      "validation_status": "Matches Groq SSE chunk delivery granularity.",
+      "measurement_method": "Configured streaming batch parameter."
+    },
+    "concurrency_knee": {
+      "value": 4,
+      "unit": "concurrent requests",
+      "provenance": "System Architecture Parameter",
+      "description": "Active in-flight request threshold before concurrency degradation begins.",
+      "validation_status": "Queueing model threshold parameter.",
+      "measurement_method": "Configured queueing threshold."
+    },
+    "concurrency_slope": {
+      "value": 0.15,
+      "unit": "fractional multiplier/request",
+      "provenance": "System Architecture Parameter",
+      "description": "Fractional latency degradation multiplier per active request exceeding concurrency knee.",
+      "validation_status": "Configured M/M/c queueing slowdown approximation.",
+      "measurement_method": "Configured degradation factor: multiplier = 1.0 + slope * max(0, C - knee)."
+    },
+    "in_flight_concurrency_cap": {
+      "value": 8,
+      "unit": "concurrent requests",
+      "provenance": "System Architecture Parameter",
+      "description": "Theoretical gateway capacity ceiling derived from Little's Law.",
+      "validation_status": "Unverified empirical measurement; derived via Little's Law: L = lambda * W = (30/60) * 16 = 8.",
+      "measurement_method": "Little's Law capacity engineering derivation."
+    },
+    "rate_limit_rpm": {
+      "value": 30,
+      "unit": "requests/minute",
+      "provenance": "Documented Rate Limit",
+      "description": "Groq free-tier sliding window requests per minute limit.",
+      "validation_status": "Verified against official Groq documentation (console.groq.com/settings/limits).",
+      "measurement_method": "Official documentation review."
+    },
+    "rate_limit_tpm": {
+      "value": 6000,
+      "unit": "tokens/minute",
+      "provenance": "Documented Rate Limit",
+      "description": "Groq free-tier rolling window tokens per minute limit.",
+      "validation_status": "Verified against official Groq documentation.",
+      "measurement_method": "Official documentation review."
+    },
+    "daily_rpd": {
+      "value": 14400,
+      "unit": "requests/day",
+      "provenance": "Documented Rate Limit",
+      "description": "Groq free-tier daily requests quota.",
+      "validation_status": "Verified against official Groq documentation.",
+      "measurement_method": "Official documentation review."
+    },
+    "daily_tpd": {
+      "value": 500000,
+      "unit": "tokens/day",
+      "provenance": "Documented Rate Limit",
+      "description": "Groq free-tier daily tokens quota.",
+      "validation_status": "Verified against official Groq documentation.",
+      "measurement_method": "Official documentation review."
+    }
+  },
+  "residuals_evaluation": {
+    "status": "UNAVAILABLE_ZERO_LIVE_CALLS",
+    "explanation": "Phase 3 and Phase 4 executed strictly offline with 0 live API calls to preserve free-tier quota. Empirical residuals (|y_real - y_standin|) cannot be computed without measured real-service data. No empirical parity claims (<10% match) are fabricated.",
+    "real_measurements": null,
+    "standin_measurements": null
+  },
+  "differences_from_real_service": [
+    {
+      "dimension": "Multi-Tenant External Contention",
+      "real_groq": "Unpredictable tail latency spikes and cold-start queueing delays caused by other tenants sharing the Groq LPU cluster.",
+      "standin": "Deterministic latency governed strictly by local in-flight concurrency tracking and configured Gaussian noise."
+    },
+    {
+      "dimension": "Sub-Minute Token Refill Granularity",
+      "real_groq": "Proprietary continuous token replenishment and leaky bucket pacing that may reject micro-bursts even when 60s volume appears within budget.",
+      "standin": "Explicit sliding-window timestamp tracker for RPM and TPM with predictable retry-after calculation."
+    },
+    {
+      "dimension": "Execution Semantics",
+      "real_groq": "Autoregressive neural generation on custom Tensor Streaming Processor / LPU hardware executing billions of matrix multiplications.",
+      "standin": "Deterministic grounded response synthesis from retrieved XML <passage> tags and arXiv citation formatting."
+    }
+  ]
+}
+

@@ -1,0 +1,68 @@
+# The Relay — Versioned Load Scenario Definitions
+# Referenced in Table 2a, Table 2b, and scripts/run_all_benchmarks.py
+
+version: "1.0.0"
+
+scenarios:
+  steady_real:
+    scenario: "steady"
+    source: "real"
+    description: "Real Groq free-tier baseline latency and header verification"
+    num_requests: 20
+    duration_s: 100.0
+    offered_rate_rpm: 12.0
+    concurrency_cap: 8
+    question_pool: "data/eval/questions.json"
+
+  steady_standin:
+    scenario: "steady"
+    source: "stand-in"
+    description: "Paired verification against real baseline on calibrated stand-in"
+    num_requests: 30
+    duration_s: 150.0
+    offered_rate_rpm: 12.0
+    concurrency_cap: 8
+    question_pool: "data/eval/questions.json"
+
+  burst:
+    scenario: "burst"
+    source: "stand-in"
+    description: "Sudden load spike testing bounded queue absorption and wait time"
+    num_requests: 30
+    duration_s: 20.0
+    offered_rate_rpm: 90.0
+    concurrency_cap: 8
+    burst_window_s: 20.0
+    question_pool: "data/eval/questions.json"
+
+  sustained_overload:
+    scenario: "sustained_overload"
+    source: "stand-in"
+    description: "Sustained 2.5x overload testing proactive deadline shedding and queue ceiling"
+    num_requests: 75
+    duration_s: 60.0
+    offered_rate_rpm: 75.0
+    concurrency_cap: 8
+    question_pool: "data/eval/questions.json"
+
+  rpm_halved:
+    scenario: "rpm_halved"
+    source: "stand-in"
+    description: "Adaptive retrieval reduction when provider halves RPM limit"
+    num_requests: 30
+    duration_s: 60.0
+    offered_rate_rpm: 30.0
+    concurrency_cap: 4
+    question_pool: "data/eval/questions.json"
+
+  daily_budget_exhausted:
+    scenario: "daily_budget_exhausted"
+    source: "stand-in"
+    description: "Simulates 3:00 PM RPD budget exhaustion and instant latch refusal"
+    num_requests: 10
+    duration_s: 20.0
+    offered_rate_rpm: 30.0
+    concurrency_cap: 8
+    exhaust_after_requests: 5
+    question_pool: "data/eval/questions.json"
+
